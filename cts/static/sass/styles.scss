@@ -1,0 +1,48 @@
+@import "bootstrap-compass";
+@import "bootstrap-variables";
+@import "bootstrap";
+@import "base";
+@import "bootstrap-override";
+
+body {
+    font-family: 'Titillium Web';
+}
+
+section#hero {
+    position: relative;
+    padding: 388px 15px 300px 15px;
+    background: url(img/hero.jpg) no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    background-attachment: fixed;
+}
+
+section#hero div.feature {
+    font-family: 'Titillium Web';
+    font-weight: 200;
+    text-align: center;
+    color: white;
+
+    h1 {
+        font-size: 75px;
+    }
+
+    p {
+        font-size: 25px;
+    }
+
+    button {
+        margin-top: 40px;
+        padding: 10px 40px;
+        font-weight: 400;
+        font-size: 20px;
+        background: #CEFA20;
+        border: none;
+        color: #333;
+        outline: none;
+
+        &:hover {
+            background: #AFD41E;
+        }
+    }
+}

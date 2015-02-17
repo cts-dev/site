@@ -1,0 +1,19 @@
+{
+  "name": "Cornerstone Technical Solutions",
+  "version": "0.0.1",
+  "description": "Cornerstone Technical Solutions Website",
+  "authors": [
+    "Jared Patrick"
+  ],
+  "license": "Not For Distribution",
+  "homepage": "http://www.cornerstonets.net",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "common/js/lib",
+    "test",
+    "tests"
+  ]
+}

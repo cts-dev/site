@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="utf-8">	
+	<title>{% block title %}Virtualization, Managed Services, DORA{% endblock %} -- Cornerstone Technical Solutions</title>
+	<link rel="shortcut icon" href="{{STATIC_URL}}favicon.ico" type="image/x-icon">
+	<link rel="icon" href="{{STATIC_URL}}favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="{{STATIC_URL}}css/styles.css">
+</head>
+<body>
+	{% include 'header.html' %}
+	{% block content %}{% endblock %}
+	{% include 'footer.html' %}
+
+	<script src="{{STATIC_URL}}js/lib/bootstrap.min.js"></script>
+</body>
+</html>

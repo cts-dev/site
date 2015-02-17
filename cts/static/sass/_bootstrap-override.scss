@@ -1,0 +1,57 @@
+.navbar {
+    margin-bottom: 0;
+    border: none;
+    border-radius: 0;
+}
+
+.navbar.navbar-default {
+    padding: 20px 15px 10px 15px;
+    background: none;
+}
+
+.navbar.navbar-default button.navbar-toggle {
+    border: none;
+    border-radius: 0;
+    background: none;
+}
+.navbar.navbar-default button.navbar-toggle span.icon-bar {
+    background: white;
+}
+
+.container-fluid>.navbar-collapse,
+.container-fluid>.navbar-header,
+.container>.navbar-collapse,
+.container>.navbar-header {
+    border: none;
+}
+
+.navbar .navbar-brand {
+    overflow: hidden;
+    padding: 5px 0;
+    color: white;
+}
+.navbar .navbar-brand img {
+    height: 40px;
+}
+
+.navbar .navbar-brand:hover {
+    color: #CAE65C;
+}
+
+.navbar-default .nav.navbar-nav li > a {
+    color: white;
+}
+.navbar-default .nav.navbar-nav li > a:hover {
+    color: #CAE65C;
+}
+
+.navbar-default button.sign-in {
+    background: #272B36;
+    border: 0;
+    border-radius: 0;
+    outline: none;
+    color: white;
+}
+.navbar-default button.sign-in:hover {
+    background: #373B47;
+}
