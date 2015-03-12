@@ -1,0 +1,120 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<section id="managed-services">
+	<div class="jumbotron">
+		<div class="container">
+			<h1>Less Is More</h1>
+			<p>Our mspulization solutions enable Enterprises to get more done in less time and at a far greater savings that other vendor offerings</p>
+		</div>
+	</div>
+
+	<div class="container">
+		<p>As customers take advantage of Cloud strategies and the flexibility they offer, companies are realizing that going to the cloud also increases complexity. As complexity increases you need more resources and as you add resources you remove resources from your core business model. As an example, if you own a lawfirm your core business is practicing law...right? Yes you need IT services, but that's not your core business. Why not think about outsourcing those services to a trusted and loyal IT Service provider and get back to business?</p>
+
+		<p>Having a Managed Service provider can save you time and money in the long-run. Whether you need a partner to manage you whole environment or just manage a few specific technologies, we can help.</p>
+
+		<p>Here at Cornerstone, we thrive at staying on the cutting edge of IT. Sure, we manage your existing infrastructure like any other provider, but unlike them you will not be just a number. We will always be thinking a step ahead to keep your company's technology current while having your best interests in mind and guide you each step of the way to your goals.</p>
+
+		<p>With our managed services we provide:</p>
+	</div>
+
+	<div class="services">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="service">
+						<p><span class="glyphicon glyphicon-menu-right"></span> Project Management Services</p>
+					</div>
+				</div>
+				<div class="col-md-12">
+					<div class="service">
+						<p><span class="glyphicon glyphicon-menu-right"></span> 24x7 monitoring</p>
+					</div>
+				</div>
+				<div class="col-md-12">
+					<div class="service">
+						<p><span class="glyphicon glyphicon-menu-right"></span> Managed AntiVirus and security solutions</p>
+					</div>
+				</div>
+				<div class="col-md-12">
+					<div class="service">
+						<p><span class="glyphicon glyphicon-menu-right"></span> Remote Support (onsite available)</p>
+					</div>
+				</div>
+				<div class="col-md-12">
+					<div class="service">
+						<p><span class="glyphicon glyphicon-menu-right"></span> Life-Cycle Management Support</p>
+					</div>
+				</div>
+				<div class="col-md-12">
+					<div class="service">
+						<p><span class="glyphicon glyphicon-menu-right"></span> Change-Management Services</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="skills">
+				<h3>Find out how Cornerstone's flexible and proactive approach can help you decide what works best for your company and how we can help accomplish YOUR goals.</h3>
+
+				<div class="row">
+					<div class="col-md-4"><p><span class="glyphicon glyphicon-menu-right"></span> Skills Provided</p></div>
+					<div class="col-md-4"><p><span class="glyphicon glyphicon-menu-right"></span> Application Development</p></div>
+					<div class="col-md-4"><p><span class="glyphicon glyphicon-menu-right"></span> Virtualization (VMWare, RedHat and Citrix)</p></div>
+					<div class="col-md-4"><p><span class="glyphicon glyphicon-menu-right"></span> Cisco Technologies</p></div>
+					<div class="col-md-4"><p><span class="glyphicon glyphicon-menu-right"></span> Symantec NetBackup</p></div>
+					<div class="col-md-4"><p><span class="glyphicon glyphicon-menu-right"></span> EMC Storage Technologies</p></div>
+					<div class="col-md-4"><p><span class="glyphicon glyphicon-menu-right"></span> EMC Networker</p></div>
+					<div class="col-md-4"><p><span class="glyphicon glyphicon-menu-right"></span> Windows and divnux Administration</p></div>
+					<div class="col-md-4"><p><span class="glyphicon glyphicon-menu-right"></span> Implementation and Integration</p></div>
+					<div class="col-md-4"><p><span class="glyphicon glyphicon-menu-right"></span> Desktop and Server Support</p></div>
+				</div>
+
+				<!-- <ul>
+					<li><p>Skills Provided</p></li>
+					<li><p>Application Development</p></li>
+					<li><p>Virtualization (VMWare, RedHat and Citrix)</p></li>
+					<li><p>Cisco Technologies</p></li>
+					<li><p>Symantec NetBackup</p></li>
+					<li><p>EMC Storage Technologies</p></li>
+					<li><p>EMC Networker</p></li>
+					<li><p>Windows and Linux Administration</p></li>
+					<li><p>Implementation and Integration</p></li>
+					<li><p>Desktop and Server Support</p></li>
+				</ul> -->
+			</div>
+		</div>
+
+		<form id="msp-form" class="call-to-action form" action="" method="post">{% csrf_token %}
+		<div class="container">
+			<h1>Request Additional Info</h1>
+
+			<div class="form-group">
+				<label for="msp-business-name">Business Name:</label>
+				<input id="msp-business-name" class="form-control" type="text" placeholder="Business Name" name="msp_business_name"/>
+			</div>
+			<div class="form-group">
+				<label for="msp-contact-name">Busines Contact:</label>
+				<input id="msp-contact-name" class="form-control" type="text" placeholder="Contact Name" name="msp_contact_name"/>
+			</div>
+			<div class="form-group">
+				<label for="msp-business-email">Busines Email:</label>
+				<input id="msp-business-email" class="form-control" type="text" placeholder="Business Email" name="msp_business_email"/>
+			</div>
+			<div class="form-group">
+				<label for="msp-business-phone">Busines Phone:</label>
+				<input id="msp-business-phone" class="form-control" type="text" placeholder="Business Phone" name="msp_business_phone"/>
+			</div>
+			<div class="form-group">
+				<label for="msp-comments">Comments:</label>
+				<textarea id="msp-comments" class="form-control" placeholder="Comments" name="msp_comments"></textarea>
+			</div>
+
+			<button type="submit" class="btn btn-submit">Submit</button>
+		</div>
+	</form>
+	</div>
+</section>
+
+{% endblock %}

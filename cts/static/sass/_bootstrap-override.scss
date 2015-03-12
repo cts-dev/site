@@ -1,57 +1,107 @@
-.navbar {
-    margin-bottom: 0;
-    border: none;
-    border-radius: 0;
-}
-
 .navbar.navbar-default {
-    padding: 20px 15px 10px 15px;
-    background: none;
-}
-
-.navbar.navbar-default button.navbar-toggle {
-    border: none;
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    margin-bottom: 0;
     border-radius: 0;
-    background: none;
-}
-.navbar.navbar-default button.navbar-toggle span.icon-bar {
-    background: white;
-}
-
-.container-fluid>.navbar-collapse,
-.container-fluid>.navbar-header,
-.container>.navbar-collapse,
-.container>.navbar-header {
-    border: none;
-}
-
-.navbar .navbar-brand {
-    overflow: hidden;
-    padding: 5px 0;
-    color: white;
-}
-.navbar .navbar-brand img {
-    height: 40px;
-}
-
-.navbar .navbar-brand:hover {
-    color: #CAE65C;
-}
-
-.navbar-default .nav.navbar-nav li > a {
-    color: white;
-}
-.navbar-default .nav.navbar-nav li > a:hover {
-    color: #CAE65C;
-}
-
-.navbar-default button.sign-in {
-    background: #272B36;
     border: 0;
-    border-radius: 0;
-    outline: none;
-    color: white;
+    background: rgba(20, 20, 20, .8);
 }
-.navbar-default button.sign-in:hover {
-    background: #373B47;
+
+.navbar.navbar-default .navbar-brand {
+    padding: 0 15px;
+    height: 40px;
+
+    img {
+        height: 40px;
+    }
+}
+
+.navbar.navbar-default .navbar-header {
+    padding: $header-pad + 5px 0;
+}
+
+.navbar.navbar-default .navbar-collapse {
+    border: none;
+}
+
+.navbar.navbar-default .navbar-collapse.in {
+    height: auto;
+}
+
+.navbar.navbar-default .navbar-toggle {
+    margin: 5px 0 0 0;
+    padding-right: 15px;
+    border-radius: 0;
+    border: none;
+    background: none;
+}
+
+.nav.navbar-nav > li > a {
+    padding: ($header-pad + 15px) 20px;
+    font-size: 16px;
+    color: white;
+
+    &:hover {
+        color: #CAE65C;
+    }
+
+    &:focus {
+        color: white;
+    }
+}
+
+
+.nav.navbar-nav > .open > a {
+    background: #CAE65C;
+
+    &:focus {
+        background: #CAE65C;
+    }
+}
+
+.navbar-default .navbar-nav .open .dropdown-menu>li>a,
+.nav.navbar-nav > li {
+    color: white;
+
+     > a.sign-in {
+        background: #4B505E;
+        color: white;
+
+        &:hover {
+            background: darken(#4B505E, 5%);
+        }
+    }
+
+    > .dropdown-menu {
+        padding: 0;
+        background: #4B505E;
+        border-radius: 0;
+        box-shadow: none;
+
+        a {
+            padding: 15px 30px;
+            color: white;
+
+            &:hover {
+               background: lighten(#4B505E, 5%);
+               color: white;
+            }
+        }
+    }
+}
+
+.btn {
+    padding: 15px 30px;
+    background: #C13558;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 0;
+    color: white;
+
+    &:hover {
+        background: darken(#C13558, 5%);
+        color: #eee;
+    }
 }

@@ -3,14 +3,86 @@
 {% block content %}
 
 <section id="hero">
+    <button class="feature-scroll scroll-left">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+        <span class="feature-text"></span>
+    </button>
+    <button class="feature-scroll scroll-right">
+        <span class="feature-text"></span>
+        <span class="glyphicon glyphicon-chevron-right"></span>
+    </button>
+
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <div class="feature">
+                <div class="feature active virtualization" data-img="hero-virtualization.jpg" data-feature-name="Virtualization">
                     <h1>Rethink Virtual Computing</h1>
                     <p>Open source virtualization backed by the security and stability of Red Hat.</p>
-                    <button class="call-to-action">Learn More</button>
+                    <a href="/virtualization" class="call-to-action">Learn More</a>
                 </div>
+            </div>
+            <div class="col-md-12">
+                <div class="feature managed-services" data-img="hero-managed-services.jpg" data-feature-name="Managed Services">
+                    <h1>Better Managed Services</h1>
+                    <p>Less is more with a streamlined process and better cost effeciency.</p>
+                    <a href="/managed-services" class="call-to-action">Learn More</a>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="feature consultation" data-img="hero-consultation.jpg" data-feature-name="Consultation">
+                    <h1>Invest In Smarter IT</h1>
+                    <p>Private Infrastructure Audit, Backup and Disaster Recovery.</p>
+                    <a href="#" class="call-to-action">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="partners">
+    <div class="container">
+        <div class="row">
+            <div class="partner">
+                <h2><img src="{{STATIC_URL}}img/redhat.png"/></h2>
+            </div>
+            <div class="partner">
+                <h2><img src="{{STATIC_URL}}img/avast.png"/></h2>
+            </div>
+            <div class="partner">
+                <h2><img src="{{STATIC_URL}}img/lenovo.png"/></h2>
+            </div>
+            <div class="partner">
+                <h2><img src="{{STATIC_URL}}img/asus.png"/></h2>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="your-way">
+    <div class="container">
+        <h1>Enterprise IT Solutions -- Your Way</h1>
+        <p>Nobody knows your needs better than you.  We can help turn these needs into working solutions and increase your business productivity.</p>
+    </div>
+</section>
+
+<section id="benefits">
+    <div class="container">
+        <div class="col-md-4">
+            <div class="benefit">
+                <h2><img src="{{STATIC_URL}}img/cube.png" /></h2>
+                <p><b>Increate ROI</b> Greater return on investment and better utilization of IT infrastructure.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="benefit">
+                <h2><img src="{{STATIC_URL}}img/cube.png" /></h2>
+                <p><b>Increase Security</b> Keep sensitive data on-site with an on-premise cloud computing solution.</a>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="benefit">
+                <h2><img src="{{STATIC_URL}}img/cube.png" /></h2>
+                <p><b>Increase Uptime</b> Less on site equipment means less service inerruptions due to upkeep.</p>
             </div>
         </div>
     </div>

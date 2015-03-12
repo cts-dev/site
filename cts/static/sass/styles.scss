@@ -1,8 +1,10 @@
+@import "base";
 @import "bootstrap-compass";
 @import "bootstrap-variables";
 @import "bootstrap";
-@import "base";
 @import "bootstrap-override";
+@import "media";
+
 
 body {
     font-family: 'Titillium Web';
@@ -10,11 +12,53 @@ body {
 
 section#hero {
     position: relative;
-    padding: 388px 15px 300px 15px;
-    background: url(img/hero.jpg) no-repeat;
+    padding: ($header-buffer + 200px) 0;
+    background-repeat: no-repeat;
     background-size: cover;
-    background-position: bottom;
+    background-position: 50%;
     background-attachment: fixed;
+
+    button.feature-scroll {
+        z-index: 100;
+        position: absolute;
+        top: 50%;
+        padding: 20px;
+        height: 10%;
+        font-size: 20px;
+        background: none;
+        border: none;
+        outline: none;
+        color: #CAE65C;
+
+        span.feature-text {
+            color: white;
+        }
+
+        span.glyphicon {
+            margin: 0 10px;
+        }
+    }
+
+    button.feature-scroll.active {
+        background: rgba(0, 0, 0, .9);
+    }
+
+    button.scroll-right {
+        right: 10px;
+    }
+
+    button.scroll-left {
+        left: 10px;
+    }
+}
+
+section#hero div.splash {
+    display: none;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: #222;
 }
 
 section#hero div.feature {
@@ -31,7 +75,8 @@ section#hero div.feature {
         font-size: 25px;
     }
 
-    button {
+    a {
+        display: inline-block;
         margin-top: 40px;
         padding: 10px 40px;
         font-weight: 400;
@@ -44,5 +89,384 @@ section#hero div.feature {
         &:hover {
             background: #AFD41E;
         }
+    }
+}
+
+section#partners {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+
+    div.partner {
+        float: left;
+        padding: 0 20px;
+        width: 25%;
+        text-align: center;
+
+        img {
+            width: 100%;
+            max-width: 150px;
+        }
+    }
+
+    div.partner:last-child {
+        border: none;
+    }
+}
+
+section#your-way {
+    position: relative;
+    padding: 150px 15px;
+    text-align: center;
+    background: url('img/your-way-bg.png');
+    background-attachment: fixed;
+    color: white;
+
+    h1 {
+        font-size: 50px;
+    }
+
+    p {
+        font-size: 20px;
+    }
+}
+
+section#benefits {
+    h1 {
+        margin: 75px 0 0 0;
+        padding-bottom: 30px;
+        border-bottom: 1px solid #dfdfdf;
+    }
+
+    h2 {
+        text-align: center;
+        color: #4B505E;
+
+        img {
+            width: 50px;
+        }
+    }
+
+    div.benefit {
+        padding: 50px;
+        text-align: center;
+
+        p {
+            font-size: 20px;
+        
+            b {
+                display: block;
+                font-size: 22px;
+            }
+
+            a {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+section#virtualization {
+    div.jumbotron {
+        background-image: url(img/hero-virtualization.jpg);
+    }
+
+    div.choice {
+        position: relative;
+        margin: 30px 0;
+        padding: 50px;
+        text-align: center;
+        background: rgba(0, 0, 0, .7);
+        color: white;
+
+        p {
+            font-size: 16px;
+        }
+    }
+
+    a {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 10px 20px;
+        font-size: 15px;
+        font-weight: bold;
+        background: #AFB3A1;
+        color: #333;
+
+        &:hover {
+            background: white;
+        }
+    }
+
+    div.path {
+        h1 {
+            margin: 30px 0;
+            padding: 10px 0;
+            text-align: center;
+            font-weight: 200;
+            border-bottom: 1px solid #eee;   
+        }
+    }
+
+    div.benefit {
+        margin: 15px 0;
+        box-sizing: border-box;
+        padding: 30px 0;
+
+        h2 {
+            font-size: 22px;
+        }
+
+        p {
+            margin: 0;
+            font-size: 16px;
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+            padding-left: 0;
+            list-style: square;
+        }
+
+        span.glyphicon {
+            display: inline-block;
+            font-size: 20px;
+            padding: 10px;
+            background: #343842;
+            color: white;
+        }
+    }
+
+    div.cta {
+        margin: 40px 0;
+        text-align: center;
+
+        button {
+            
+        }
+    }
+}
+
+section#managed-services {
+    font-size: 16px;
+
+    div.jumbotron {
+        background-image: url(img/hero-managed-services.jpg);
+    }
+
+    div.service {
+        margin: 5px 0;
+        background: #eee;
+
+        p {
+            padding: 16px;
+        }
+    }
+
+    div.skills {
+        margin: 20px 0 0 0;
+        padding: 20px;
+        background: #404450;
+        color: white;
+
+        h3 {
+            margin-bottom: 30px;
+        }
+
+        span.glyphicon-menu-right {
+            color: lighten(#4B505E, 5%);
+        }
+    }
+}
+
+div.jumbotron {
+    padding: 70 + 75px 0;
+    background: darken(#4B505E, 10%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    color: white;
+
+    h1 {
+        font-size: 75px;
+    }
+
+    p {
+        font-size: 30px;
+        font-weight: 200;
+    }
+}
+
+form.call-to-action {
+    margin-top: 50px;
+    padding: 30px 0;
+    font-size: 16px;
+    background: #eee;
+
+    h1 {
+        margin-bottom: 30px;
+        font-weight: bold;
+    }
+
+    input.form-control, textarea {
+        border-radius: 0;
+        outline: none;
+        box-shadow: none;
+    }
+
+    input.form-control:focus, textarea:focus {
+        border: 1px solid #888;
+    }
+
+    textarea {
+        height: 100px;
+    }
+
+    button[type=submit] {
+        margin-top: 10px;
+    }
+}
+
+section#company {
+    div.jumbotron {
+        margin: 0;
+        background-image: url(img/working.jpg);
+        background-position: 0 60%;
+    }
+
+    div.history {
+        padding: 50px 0;
+        font-size: 16px;
+
+        img {
+            text-align: center;
+        }
+    }
+
+    div.management-team {
+        padding: 30px 0;
+        background: #eee;
+
+        h1 {
+            margin: 20px 0;
+            font-weight: 200;
+        }
+    }
+
+    div.team-member {
+        position: relative;
+        margin-bottom: 30px;
+        padding: 20px;
+        background: #4B505E;
+        color: white;
+
+        small {
+            font-weight: 200;
+            color: white;
+        }
+
+        button {
+            display: none;
+            background: #CEFA20;
+            border: none;
+            border-radius: 0;
+            color: #333;
+        }
+
+        button:hover {
+            background: #CAE65C;
+            border: none;
+            color: #333;
+        }
+
+        button:focus {
+            background: #CAE65C;
+            border: none;
+            color: #333;
+            outline: none;
+        }
+
+        div.bio {
+            left: 0;
+            margin-top: 20px;
+        }
+
+        div.bio.js {
+            z-index: 10;
+            padding: 20px;
+            position: absolute;
+            background: #373b47;
+        }
+    }
+}
+
+footer {
+    padding: 50px 0;
+    background: darken(#373b47, 10%);
+
+    h3 {
+        font-size: 25px;
+        color: #CAE65C;
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        li {
+            margin: 5px 0;
+        }
+
+        a {
+            text-decoration: none;
+            font-size: 16px;
+            color: white;
+
+            &:hover {
+                color: darken(#CAE65C, 15%);
+                text-decoration: none;
+            }
+        }
+    }
+
+    div.final {
+        margin-top: 50px;
+
+        .container {
+            padding: 15px;
+            border-top: 1px solid #373b47;            
+        } 
+
+        div.follow-us {
+            float: left;
+            color: white;
+
+            a {
+                color: white;
+            }
+
+            ul.social {
+                font-size: 20px;
+            
+                li {
+                   float: left;
+                    margin-right: 20px;
+                }   
+            }
+        }
+
+        small {
+            clear: right;
+            float: right;
+            font-size: 14px;
+            color: white;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    section#partners div.partner {
+        width: 50%;
     }
 }

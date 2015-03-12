@@ -1,0 +1,105 @@
+{% extends 'base.html' %}
+
+{% block title %}{% endblock %}
+
+{% block content %}
+
+<section id="virtualization">
+	<div class="jumbotron">
+		<div class="container">
+			<h1>Less Is More</h1>
+			<p>Our virtulization solutions enable Enterprises to get more done in less time and at a far greater savings that other vendor offerings</p>
+		</div>
+	</div>
+
+	<div class="container">
+		<h1>Powered By Red Hat</h1>
+		<p>Deploy virtual infrastructure on a trusted platform.  As a leader in resilient open-source solutions, Red Hat will be a firm foundation to build your virtual environment on.</p>
+	</div>	
+
+	<div class="path have-virtualization">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">
+					<div class="benefit">
+						<span class="glyphicon glyphicon-usd"></span>
+						<h2>Vendor Cost are Steadily Rising</h2>
+						<p>If you have virtualization with another vendor, you may have noticed that it is costing you more than you realize. Finding a cost effective solution can be dfifficult since pricing doesn't provide variation between vendors.</p>
+					</div>
+				</div>
+
+				<div class="col-md-4">
+					<div class="benefit">
+						<span class="glyphicon glyphicon-saved"></span>
+						<h2>Provide Better Resource Utilization</h2>
+						<p>Many times we see our customers over paying and/or under utilizing their existing virtual infrastructure. In some cases, that scenario is flipped where the environment is growing faster than our customer can keep up with.</p>
+					</div>
+				</div>
+
+				<div class="col-md-4">
+					<div class="benefit">
+						<span class="glyphicon glyphicon-tasks"></span>
+						<h2>Use VDI as your DeskTop Alternative</h2>
+						<p>Centralize your existing desktops and desktop management into your datacenter. Consolidate resources onto your back-end servers and provide a highly available and redundant environment for your users through a single pane of glass.</p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4">
+					<div class="benefit">
+						<span class="glyphicon glyphicon-time"></span>
+						<h2>Signficantly Reduce CAPEX and OPEX</h2>
+						<p>Rapidly provision infrastructure, applications and complete IT services in minutes.</p>
+					</div>
+				</div>
+
+				<div class="col-md-4">
+					<div class="benefit">
+						<span class="glyphicon glyphicon-resize-small"></span>
+						<h2>Consolidate Your Server Footprint</h2>
+						<p>Consolidate over 50 Virtual Machines onto 2 physical servers in 4U of rack-space.</p>
+					</div>
+				</div>
+
+				<div class="col-md-4">
+					<div class="benefit">
+						<span class="glyphicon glyphicon-wrench"></span>
+						<h2>Centralized Server Management</h2>
+						<p>One pane of glass to manage all your servers and virtual desktops.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<form id="virtualizaiton-form" class="call-to-action form" action="" method="post">{% csrf_token %}
+		<div class="container">
+			<h1>Request Additional Info</h1>
+
+			<div class="form-group">
+				<label for="virt-business-name">Business Name:</label>
+				<input id="virt-business-name" class="form-control" type="text" placeholder="Business Name" name="virt_business_name"/>
+			</div>
+			<div class="form-group">
+				<label for="virt-contact-name">Busines Contact:</label>
+				<input id="virt-contact-name" class="form-control" type="text" placeholder="Contact Name" name="virt_contact_name"/>
+			</div>
+			<div class="form-group">
+				<label for="virt-business-email">Busines Email:</label>
+				<input id="virt-business-email" class="form-control" type="text" placeholder="Business Email" name="virt_business_email"/>
+			</div>
+			<div class="form-group">
+				<label for="virt-business-phone">Busines Phone:</label>
+				<input id="virt-business-phone" class="form-control" type="text" placeholder="Business Phone" name="virt_business_phone"/>
+			</div>
+			<div class="form-group">
+				<label for="virt-comments">Comments:</label>
+				<textarea id="virt-comments" class="form-control" placeholder="Comments" name="virt_comments"></textarea>
+			</div>
+
+			<button type="submit" class="btn btn-submit">Submit</button>
+		</div>
+	</form>
+</section>
+
+{% endblock %}

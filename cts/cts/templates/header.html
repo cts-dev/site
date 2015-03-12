@@ -1,23 +1,44 @@
-<nav class="navbar navbar-default navbar-fixed-top">
+<nav class="navbar navbar-default">
     <div class="container-fluid">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-main">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#"><img src="{{STATIC_URL}}img/cts-logo.png"></a>
-            </div>
-            <div class="collapse navbar-collapse" id="nav-main">
-                <ul class="nav navbar-nav navbar-right">
-                    <li class=><a href="#">Services</a></li>
-                    <li class=><a href="#">Products</a></li>
-                    <li class=><a href="#">Company</a></li>
-                    <li><button type="button" class="btn btn-default navbar-btn navbar-right sign-in">Accounts</button></li>
-                </ul>
-            </div>
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-main">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/"><img src="{{STATIC_URL}}img/cts-logo.png"></a>
+        </div>
+        <div class="collapse navbar-collapse" id="nav-main">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" href="#">Services</a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="{% url 'virtualization' %}">Virtualization</a></li>
+                        <li><a href="{% url 'managed_services' %}">Managed Services</a></li>
+                        <li><a href="{% url 'showcase' %}">Showcase</a></li>
+                        {#<li><a href="#">ONE</a></li>#}
+                        {#<li><a href="#">IT Staff Augmentation</a></li>#}
+                    </ul>
+                </li>
+                <!--<li>
+                    <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" href="#">Products</a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">VDI-In-A-Box</a></li>
+                        <li><a href="#">Reseller</a></li>
+                    </ul>
+                </li>-->
+                <li>
+                <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" href="#">Consulting</a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">Private Infrastructure Audit (P.I.A.)</a></li>
+                        <li><a href="#">Technology Feasibility Analysis</a></li>
+                        <li><a href="#">Cost Management Analysis</a></li>
+                    </ul>
+                </li>
+                <li><a href="/company">Company</a></li>
+                <li><a class="sign-in" href="#">Sign In</a></li>
+            </ul>                
         </div>
     </div>
 </nav>
