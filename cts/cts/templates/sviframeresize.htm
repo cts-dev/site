@@ -26,14 +26,32 @@
       }
       window.onload = onLoad;
     </script>
+    <meta charset="utf-8">
+    <title>{% block title %}Virtualization, Managed Services, DORA{% endblock %} -- Cornerstone Technical Solutions</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="{{STATIC_URL}}favicon.ico" type="image/x-icon">
+    <link rel="icon" href="{{STATIC_URL}}favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="{{STATIC_URL}}css/styles.css">
+      
+    <style>
+	body, html {min-height: 100%;}
+	.navbar.navbar-default {
+	    position: static;
+	}
+    </style> 
   </head>
   <body>
-    <div class="clsMessage">Accessing SharedVue Content...</div>
-
-    <iframe width="100%" height="500" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto" id="idSVIframe" onload="try{scroll(0,0)}catch(e){}">
+    {% include 'header.html' %}
+    <div class="iframe-wrapper">
+	<iframe width="100%" height="100%" frameborder="0" marginheight="0" marginwidth="0" scrolling="scroll" id="idSVIframe" onload="try{scroll(0,0)}catch(e){}">
       <div style="font:10px sans-serif;color:#666666;">Sorry, your browser doesn't support iframes.</div>
     </iframe>
+    {% include 'footer.html' %}	    
     <script language="javascript" src="http://redhat.sharedvue.net/sharedvue/iframe/resize.js"></script>
-    <script language="javascript">fncSVSetIframe('CornerstoneTS.net/sviframeresize.htm&svgroup=redhat_showcase');</script>
-  </body>
+    <script language="javascript">fncSVSetIframe('CornerstoneTS.net/sviframeresize.htm&svgroup=redhat_showcase');</script>	 
+    <script src="{{STATIC_URL}}js/lib/jquery/dist/jquery.min.js"></script>
+    <script src="{{STATIC_URL}}js/lib/bootstrap/bootstrap.min.js"></script>
+    <script src="{{STATIC_URL}}js/script.js"></script>
+ </body>
 </html>
+
