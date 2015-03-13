@@ -15,59 +15,59 @@
 
 	        <p>In the world of IT, there are always unexpected costs. Whether it be increasing prices in year 3 of your support contracts or an uxexpected project deliverable in the middle of your budget cycle. CTS can provide Cost Management Analysis to insure your your next venture is a great long-term investment.
 	        </p>
-	        
+
 	        <ul class="check">
-	            <li><span class="glyphicon glyphicon-menu-right"></span><span> Take back control of your IT budget!</span>                               
+	            <li><span class="glyphicon glyphicon-menu-right"></span><span> Take back control of your IT budget!</span>
 	        </ul>
 		</div>
-	
+
 
 		<div class="offering">
 			<h2>Technology Feasibility Analysis</h2>
-	        
+
 	        <p>Most businesses know where they want to go, but with so many possibilities, are unsure how to get there. We at CTS thrive at guiding our clients down the right road to insure they obtain the right technologies to accomplish their business Goals.</p>
-	        
+
 	        <ul class="check">
-	            <li><span class="glyphicon glyphicon-menu-right"></span><span> Current Environment Analysis</span></li>                                              
+	            <li><span class="glyphicon glyphicon-menu-right"></span><span> Current Environment Analysis</span></li>
 	        </ul>
 		</div>
-    
+
     	<div class="offering">
     		<h2>IT Staff Augmentation</h2>
-	        
+
 	        <p>We at CTS have the ability to provide top-notch IT Staffing services. Our candidates stand out from the rest.
-	        
+
 	        <ul class="check">
 	            <li><span class="glyphicon glyphicon-menu-right"></span><span> Remote IT Staff</span></li>
 	            <li><span class="glyphicon glyphicon-menu-right"></span><span> On-Site Staff Augmentation</span></li>
 	        </ul>
     	</div>
 	</div>
-	<form id="consulting-form" class="call-to-action form" action="" method="post">{% csrf_token %}
+	<form id="cta-form" class="call-to-action form" action="" method="post">{% csrf_token %}
 		<div class="container">
 			<h1>Request Additional Info</h1>
 
 			<div class="form-group">
-				<label for="consulting-business-name">Business Name:</label>
-				<input id="consulting-business-name" class="form-control" type="text" placeholder="Business Name" name="consulting_business_name"/>
+				<label for="business-name">Business Name:</label>
+				<input id="business-name" class="form-control" type="text" placeholder="Business Name" name="business_name"/>
 			</div>
 			<div class="form-group">
-				<label for="consulting-contact-name">Busines Contact:</label>
-				<input id="consulting-contact-name" class="form-control" type="text" placeholder="Contact Name" name="consulting_contact_name"/>
+				<label for="contact-name">Busines Contact:</label>
+				<input id="contact-name" class="form-control" type="text" placeholder="Contact Name" name="contact_name"/>
 			</div>
 			<div class="form-group">
-				<label for="consulting-business-email">Busines Email:</label>
-				<input id="consulting-business-email" class="form-control" type="text" placeholder="Business Email" name="consulting_business_email"/>
+				<label for="business-email">Busines Email:</label>
+				<input id="business-email" class="form-control" type="text" placeholder="Business Email" name="business_email"/>
 			</div>
 			<div class="form-group">
-				<label for="consulting-business-phone">Busines Phone:</label>
-				<input id="consulting-business-phone" class="form-control" type="text" placeholder="Business Phone" name="consulting_business_phone"/>
+				<label for="business-phone">Busines Phone:</label>
+				<input id="business-phone" class="form-control" type="text" placeholder="Business Phone" name="business_phone"/>
 			</div>
 			<div class="form-group">
-				<label for="consulting-comments">Comments:</label>
-				<textarea id="consulting-comments" class="form-control" placeholder="Comments" name="msp_comments"></textarea>
+				<label for="comments">Comments:</label>
+				<textarea id="comments" class="form-control" placeholder="Comments" name="comments"></textarea>
 			</div>
-
+			<input id="service_type" type="hidden" name="service_type" value="consulting">
 			<button type="submit" class="btn btn-submit">Submit</button>
 		</div>
 	</form>

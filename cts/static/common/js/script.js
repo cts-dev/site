@@ -3,7 +3,7 @@ $(function() {
 	 * Hero section functionality
 	 */
 
-	if (window.location.pathname === '/') { 
+	if (window.location.pathname === '/') {
 		var hero = $('section#hero');
 		var features = hero.find('div.feature');
 		var featureScroll = $('section#hero button.feature-scroll');
@@ -26,7 +26,7 @@ $(function() {
 			var new_img = feature.attr('data-img');
 
 			hero.css(
-				'background-image', 
+				'background-image',
 				'url(/static/css/img/' + new_img + ')'
 			);
 
@@ -35,7 +35,7 @@ $(function() {
 			featureScrollAnimate('active');
 		});
 	}
-	
+
 
 	function getActiveFeature() {
 		var active;
@@ -53,7 +53,7 @@ $(function() {
 	function setScrollerText(pos) {
 		var activeIndex;
 
-		for (var i = 0; i < features.length; i++) {			
+		for (var i = 0; i < features.length; i++) {
 			if ($(features[i]).hasClass('active')) {
 				activeIndex = i;
 			}
@@ -65,7 +65,7 @@ $(function() {
 			} else {
 				var target = $(features[activeIndex-1]);
 			}
-		} else if (pos === 'right') { 
+		} else if (pos === 'right') {
 			if (activeIndex === features.length-1) {
 				var target = $(features[0]);
 			} else {
@@ -119,4 +119,53 @@ $(function() {
     teamMembers.find('button').show().on('click', function() {
         $(this).next().stop(true, true).slideToggle();
     })
+})
+
+$(function() {
+	/**
+	 * Contact Form
+	 */
+	var requestInfo = $('form#cta-form');
+	var required = [
+		'#business-name',
+		'#contact-name'
+	]
+
+	requestInfo.find('input').on('click', function() {
+		$(this).css('border', 'none');
+	})
+
+	requestInfo.find('button').on('click', function(e) {
+		e.preventDefault();
+		var errors = false;
+
+		for (var i = 0; i < required.length; i++) {
+			var field = requestInfo.find(required[i]);
+
+			if (!field[0].value) {
+				errors = true;
+				field.css('border', '1px solid red');
+			}
+		}
+
+		if (errors === false) {
+			var thankYou = $('<div>');
+			var thankYouMsg = $('<p>');
+			var thankYouOverlay = $('<div>');
+			thankYou.addClass('cta-form-thank-you');
+			thankYouOverlay.addClass('cta-form-thank-you-overlay');
+			thankYouMsg.html('<span class="title">Thank you</span> With so many vendors that you can choose from, we appreciate your time and consideration. Someone will be in contact with you shortly. <span class="continue">click anywhere to continue</span>');
+			$(thankYou).append(thankYouMsg);
+			$('body').append(thankYou);
+			$('body').append(thankYouOverlay);
+
+			setTimeout(function() {
+				$('body').on('click', function() {
+					thankYou.remove();
+					thankYouOverlay.remove();
+					requestInfo.submit();
+				});
+			}, 1000)
+		}
+	})
 })

@@ -152,7 +152,7 @@ section#benefits {
 
         p {
             font-size: 20px;
-        
+
             b {
                 display: block;
                 font-size: 22px;
@@ -203,7 +203,7 @@ section#virtualization {
             padding: 10px 0;
             text-align: center;
             font-weight: 200;
-            border-bottom: 1px solid #eee;   
+            border-bottom: 1px solid #eee;
         }
     }
 
@@ -242,7 +242,7 @@ section#virtualization {
         text-align: center;
 
         button {
-            
+
         }
     }
 }
@@ -400,6 +400,38 @@ section#company {
     }
 }
 
+section#consulting {
+    div.jumbotron {
+        background-image: url(img/hero-consulting.jpg);
+        background-position: 0 20%
+    }
+
+    div.offering {
+        margin: 50px 0;
+
+        h2 {
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd
+        }
+
+        p {
+            font-size: 16px
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+
+            li {
+                list-style: none;
+
+                span {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
 
 footer {
     padding: 50px 0;
@@ -436,8 +468,8 @@ footer {
 
         .container {
             padding: 15px;
-            border-top: 1px solid #373b47;            
-        } 
+            border-top: 1px solid #373b47;
+        }
 
         div.follow-us {
             float: left;
@@ -449,11 +481,11 @@ footer {
 
             ul.social {
                 font-size: 20px;
-            
+
                 li {
                    float: left;
                     margin-right: 20px;
-                }   
+                }
             }
         }
 
@@ -464,6 +496,46 @@ footer {
             color: white;
         }
     }
+}
+
+div.cta-form-thank-you {
+    z-index: 100;
+    position: fixed;
+    top: 150px;
+    margin: auto;
+    padding: 50px;
+    width: 100%;
+    text-align: center;
+
+    p {
+        display: inline-block;
+        padding: 50px;
+        max-width: 500px;
+        text-align: left;
+        font-size: 16px;
+        background: white;
+
+        span.title {
+            display: block;
+            font-size: 40px;
+        }
+
+        span.continue {
+            display: block;
+            margin-top: 20px;
+            color: #ad304f;
+        }
+    }
+}
+
+div.cta-form-thank-you-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, .8);
+    cursor: pointer;
 }
 
 @media (max-width: 768px) {

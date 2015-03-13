@@ -104,4 +104,9 @@
         background: darken(#C13558, 5%);
         color: #eee;
     }
+
+    &:focus {
+        color: #eee;
+        outline: none;
+    }
 }
