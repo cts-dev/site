@@ -19,3 +19,7 @@ def managed_services(request):
 
 def company(request):
 	return render(request, 'company.html')
+
+
+def consulting(request):
+	return render(request, 'consulting.html')

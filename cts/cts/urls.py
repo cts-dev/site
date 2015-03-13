@@ -7,5 +7,6 @@ urlpatterns = patterns('',
     url(r'^showcase/', 'cts.views.showcase', name='showcase'),
     url(r'^managed-services/', 'cts.views.managed_services', name='managed_services'),
     url(r'^company/', 'cts.views.company', name='company'),
+    url(r'^consulting/', 'cts.views.consulting', name='consulting'),
     url(r'^admin/', include(admin.site.urls)),
 )
