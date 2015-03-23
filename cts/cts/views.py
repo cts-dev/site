@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect
+from django.core.mail import send_mail
 
 from models import Prospect
 from forms import ProspectForm
@@ -12,6 +13,10 @@ def virtualization(request):
         form = ProspectForm(request.POST)
 
         if form.is_valid():
+	    service = request.POST['service_name')
+	    
+
+
             form.save()
             return redirect(request.META['PATH_INFO'])
 

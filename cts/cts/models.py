@@ -8,6 +8,7 @@ class Prospect(models.Model):
     business_email = models.CharField(max_length=255, null=True, blank=True)
     business_phone = models.CharField(max_length=255, null=True, blank=True)
     comments = models.TextField(null=True, blank=True)
+    timestamp = models.DateTimeField(auto_now_add=True)
 
 
     def __unicode__(self):

@@ -3,14 +3,16 @@
 {% block content %}
 
 <section id="hero">
-    <button class="feature-scroll scroll-left">
-        <span class="glyphicon glyphicon-chevron-left"></span>
-        <span class="feature-text"></span>
-    </button>
-    <button class="feature-scroll scroll-right">
-        <span class="feature-text"></span>
-        <span class="glyphicon glyphicon-chevron-right"></span>
-    </button>
+    <div class="controls">
+	<button class="feature-scroll scroll-left">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+	    <span class="feature-text"></span>
+	</button>
+	<button class="feature-scroll scroll-right">
+	    <span class="feature-text"></span>
+	    <span class="glyphicon glyphicon-chevron-right"></span>
+	</button>
+    </div>
 
     <div class="container">
         <div class="row">
@@ -32,7 +34,7 @@
                 <div class="feature consulting" data-img="hero-consulting.jpg" data-feature-name="Consulting">
                     <h1>Invest In Smarter IT</h1>
                     <p>Private Infrastructure Audit, Backup and Disaster Recovery.</p>
-                    <a href="#" class="call-to-action">Learn More</a>
+                    <a href="/consulting" class="call-to-action">Learn More</a>
                 </div>
             </div>
         </div>
@@ -70,7 +72,7 @@
         <div class="col-md-4">
             <div class="benefit">
                 <h2><img src="{{STATIC_URL}}img/cube.png" /></h2>
-                <p><b>Increate ROI</b> Greater return on investment and better utilization of IT infrastructure.</p>
+                <p><b>Increase ROI</b> Greater return on investment and better utilization of IT infrastructure.</p>
             </div>
         </div>
         <div class="col-md-4">

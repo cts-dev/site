@@ -542,4 +542,21 @@ div.cta-form-thank-you-overlay {
     section#partners div.partner {
         width: 50%;
     }
+
+    section#hero {
+	padding: ($header-buffer + 50px) 0;
+	
+	h1 { 
+	    font-size: 40px;	
+	}
+
+	div.controls {
+	    overflow: hidden;
+	    display: none;    
+	}
+
+	div.jumbotron h1 {
+	    font-size: 40px;	
+	}
+    }
 }
