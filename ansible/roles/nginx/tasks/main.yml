@@ -11,4 +11,5 @@
     network_mode: host
     volumes:
     - /srv/nginx/nginx.conf:/etc/nginx/conf.d/default.conf
+    - /srv/nginx/logs:/var/log/nginx   
     - /srv/cts/static:/usr/share/nginx/html/cts
