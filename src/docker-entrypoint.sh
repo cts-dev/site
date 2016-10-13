@@ -1,3 +1,6 @@
+# remove existing sqlite3 if presetn
+rm data/db.sqlite3
+
 # sync database and collect static files
 python manage.py syncdb --noinput
 python manage.py collectstatic --noinput

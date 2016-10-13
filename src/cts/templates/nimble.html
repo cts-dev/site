@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+{% block title %}Nimble Enterprise Storage{% endblock %}
+
+{% block content %}
+
+<section id="nimble">
+	<div class="jumbotron">
+		<div class="container">
+			<h1>Enterprise Storage</h1>
+			<p>Get to Know the Industry’s Fastest-growing Storage Vendor.</p>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6">
+				<img class="nimble-logo" src="{{STATIC_URL}}img/nimble-logo.jpg">
+			</div>
+		</div>
+
+		<div class="intro">
+			<p>IT professionals like you are facing tight budgets and skyrocketing storage demands. Yet Nimble Storage customers have deployed full-featured, high-performance storage, backup, and disaster recovery solutions at a fraction of the cost of existing technologies. How?</p>
+
+			<div class="row benefits">
+				<div class="col-md-4"><img src="{{STATIC_URL}}img/features.svg"></div>
+				<div class="col-md-4"><img src="{{STATIC_URL}}img/benefits.svg"></div>
+				<div class="col-md-4"><img src="{{STATIC_URL}}img/performance.svg"></div>
+			</div>
+
+			<div class="showcase">
+				<a href="http://cornerstonets.nimblestorageshowcase.com/"><img src="http://nimblestorage.sharedvue.net/NimbleStorage/synd/images/buttons/showcase-small-2.png" alt="Visit our NimbleStorage Solutions Showcase" border="0" height="150" width="150"></a>
+			</div>
+
+			<p>Nimble Storage’s award-winning Cache Accelerated Sequential Layout (CASL™) is the first adaptive flash storage architecture designed from the ground up to seamlessly integrate SSDs with high-capacity disks, all to give you these industry-leading benefits:</p>
+
+			<ul>
+				<li>
+					<p><span class="glyphicon glyphicon-menu-right"></span> <b>Unparalleled performance and capacity efficiency:</b> Compared to traditional storage solutions, Nimble delivers 5x higher GB/$, a 4x reduction in rackspace and power requirements, and dramatically lower TCO</p>
+				</li>
+				<li>
+					<p><span class="glyphicon glyphicon-menu-right"></span> <b>Better backups and DR:</b> Nimble’s breakthrough architecture enables capacity-efficient snapshots, frequent recovery points, and up to 120 days of backups.</p>
+				</li>
+				<li>
+					<p><span class="glyphicon glyphicon-menu-right"></span> <b>Stress-Free Operations:</b> Even IT generalists can manage an integrated, full-featured storage solution thanks to Nimble’s intuitive UI, proactive support features, and pre-configured application profiles for VMware, VDI, Exchange, SharePoint, and SQL.</p>
+				</li>
+				<li>
+					<p><span class="glyphicon glyphicon-menu-right"></span> <b>Proactive Wellness:</b> With InfoSight™, Nimble Storage takes a new approach to the storage lifecycle, one that leverages the power of deep-data analytics and cloud-based management to deliver true operational efficiency across all storage activities. This “deep data” approach to customer support delivers storage health insights that can be leveraged to streamline maintenance by enabling granular alerting, accurate forecasting, and a level of overall storage health insight that vastly improves productivity and optimizes system availability.</p>
+				</li>
+			</ul>
+
+			<p>As an authorized Nimble Storage reseller, we at Cornerstone  are fully trained to seamlessly and cost-effectively integrate Nimble solutions into your existing environment. Use the Contact Form below to find out more.</p>
+		</div>
+
+		<div class="feature-video">
+			<a href="https://www.youtube.com/watch?v=PBEfke8jApw" target="_blank">See How Nimble Storage Is Transforming the IT Industry </a>
+		</div>
+	</div>
+</section>
+
+{% endblock %}	

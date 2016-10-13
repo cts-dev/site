@@ -2,11 +2,17 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-3">
+				<h3>Infrastructure</h3>
+				<ul>
+					<li><a href="{% url 'virtualization' %}">Virtualization</a></li>
+					<li><a href="{% url 'nimble' %}">Nimble Storage</a></li>
+					<li><a href="{% url 'showcase' %}">Red Hat Showcase</a></li>
+				</ul>
+			</div>
+			<div class="col-md-3">
 				<h3>Services</h3>
 				<ul>
-					<li><a href="/virtualization">Virutalization</a></li>
-					<li><a href="/managed-services">Managed Services</a></li>
-					<li><a href="/showcase">Showcase</a></li>
+					<li><a href="{% url 'managed_services' %}">Managed Services</a></li>
 				</ul>
 			</div>
 			<!-- <div class="col-md-3">
@@ -19,16 +25,16 @@
 			<div class="col-md-3">
 				<h3>Consulting</h3>
 				<ul>
-					<li><a href="/consulting">Cost Management Analysis</a></li>
-					<li><a href="/consulting">Technology Feasability Analysis</a></li>
-					<li><a href="/consulting">IT Staff Augmentation</a></li>
+					<li><a href="{% url 'consulting' %}">Cost Management Analysis</a></li>
+					<li><a href="{% url 'consulting' %}">Technology Feasability Analysis</a></li>
+					<li><a href="{% url 'consulting' %}">IT Staff Augmentation</a></li>
 				</ul>
 			</div>
 			<div class="col-md-3">
 				<h3>Company</h3>
 				<ul>
-					<li><a href="/company">History &amp; culture</a></li>
-					<li><a href="/company">Management Team</a></li>
+					<li><a href="{% url 'company' %}">History &amp; culture</a></li>
+					<li><a href="{% url 'company' %}">Management Team</a></li>
 				</ul>
 			</div>
 		</div>
@@ -36,7 +42,7 @@
 	<div class="final">
 		<div class="container">
 			<div class="follow-us">
-				<a href="#">Contact Us</a>
+				<a href="{% url 'contact' %}">Contact Us</a>
 				<ul class="social">
 					<li><a href="https://twitter.com/cornerstonets"><i class="fa fa-twitter"></i></a></li>
 					<li><a href="https://www.linkedin.com/company/cornerstone-technical-solutions-llc"><i class="fa fa-linkedin"></i></a></li>

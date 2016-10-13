@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+
+{% block title %}Contact{% endblock %}
+
+{% block content %}
+
+<section id="contact">
+	<img class="downtown" src="{{ STATIC_URL }}img/downtown_raleigh.jpg">
+	<div class='embed-container maps'>
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3229.7203451226096!2d-78.52293629999997!3d35.953810499999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89ac517435b33ed3%3A0xe12635debb68afa8!2s1784+Heritage+Center+Dr%2C+Wake+Forest%2C+NC+27587!5e0!3m2!1sen!2sus!4v1430278524981" width="100%" height="600" frameborder="0" style="border:0"></iframe>
+	</div>
+
+	<div class="container">
+		<div class="info">
+			<ul>
+				<li><b>Cornerstone Technical Solutions</b></li>
+				<li>1784 Heritage Center Drive</li>
+				<li>Wake Forest, NC 27587</li>
+				<li>919-704-4CTS(4287)</li>
+			</ul>
+
+			<ul class="social">
+				<li><a href="https://twitter.com/cornerstonets"><i class="fa fa-twitter"></i></a></li>
+				<li><a href="https://www.linkedin.com/company/cornerstone-technical-solutions-llc"><i class="fa fa-linkedin"></i></a></li>
+			</ul>
+		</div>
+	</div>
+
+	<form id="cta-form" class="call-to-action form" action="" method="post">{% csrf_token %}
+		<div class="container">
+			<h1>Contact Us</h1>
+
+			<div class="form-group">
+				<label for="service_type">Service Type:</label>
+				<select id="service_type" class="form-control" name="service_type">
+					<option>Virtualization</option>
+					<option>Nimble Storage</option>
+					<option>Managed Services</option>
+					<option>Consulting</option>
+					<option>General</option>
+				</select>
+			</div>
+
+			<div class="form-group">
+				<label for="business-name">Business Name:</label>
+				<input id="business-name" class="form-control" type="text" placeholder="Business Name" name="business_name"/>
+			</div>
+			<div class="form-group">
+				<label for="contact-name">Business Contact:</label>
+				<input id="contact-name" class="form-control" type="text" placeholder="Contact Name" name="contact_name"/>
+			</div>
+			<div class="form-group">
+				<label for="business-email">Business Email:</label>
+				<input id="business-email" class="form-control" type="text" placeholder="Business Email" name="business_email"/>
+			</div>
+			<div class="form-group">
+				<label for="business-phone">Business Phone:</label>
+				<input id="business-phone" class="form-control" type="text" placeholder="Business Phone" name="business_phone"/>
+			</div>
+			<div class="form-group">
+				<label for="comments">Comments:</label>
+				<textarea id="comments" class="form-control" placeholder="Comments" name="comments"></textarea>
+			</div>
+			<button type="submit" class="btn btn-submit">Submit</button>
+		</div>
+	</form>
+</section>
+
+{% endblock %}
