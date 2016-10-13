@@ -24,7 +24,7 @@ DEBUG = True
 
 TEMPLATE_DEBUG = True
 
-ALLOWED_HOSTS = ['.cornerstonets.net', 'www.cornerstonets.net']
+ALLOWED_HOSTS = ['.cornerstonets.net', 'localhost']
 
 
 # Application definition
