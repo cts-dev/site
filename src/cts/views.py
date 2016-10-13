@@ -13,10 +13,6 @@ def virtualization(request):
         form = ProspectForm(request.POST)
 
         if form.is_valid():
-	    service = request.POST['service_name')
-	    
-
-
             form.save()
             return redirect(request.META['PATH_INFO'])
 
