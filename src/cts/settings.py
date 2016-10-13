@@ -84,3 +84,9 @@ USE_TZ = True
 STATIC_ROOT = os.path.join(BASE_DIR, '..', 'static')
 STATIC_URL = '/static/'
 STATICFILES_DIRS = ('static/common',)
+
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'contactus@cornerstonets.net'
+EMAIL_HOST_PASSWORD = 'J3sus7771!'
