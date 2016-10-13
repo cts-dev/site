@@ -14,6 +14,6 @@ RUN echo "from django.contrib.auth.models import User; User.objects.create_super
 RUN echo "from django.contrib.auth.models import User; User.objects.create_superuser('gshaffer', 'gary.shaffer@cornerstonets.net', 'cornerstone-devel1!')" | python manage.py shell
 
 # turn off DEBUG mode
-RUN sed -i s/'DEBUG = True'/'DEBUG = False'/ src/cts/settings.py
+RUN sed -i s/'DEBUG = True'/'DEBUG = False'/ cts/settings.py
 
 CMD gunicorn cts.wsgi:application -b 0.0.0.0:8000
