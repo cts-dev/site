@@ -1,0 +1,21 @@
+---
+- name: pull source from github
+  git: repo=git@github.com:cts-dev/site.git dest=/root/cts
+- name: build docker container
+  docker_image:
+    api_version: 1.19
+    force: true
+    name: cts
+    path: cts
+    state: present
+- name: start docker container
+  docker_container:
+    api_version: 1.19
+    name: cts
+    image: cts
+    ports:
+    - 8000:8000
+    restart_policy: always
+    volumes:
+    - /srv/cts/data:/app/data
+    - /srv/cts/static:/static

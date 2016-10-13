@@ -1,0 +1,4 @@
+localhost ansible_connection=local
+
+[webservers]
+108.61.192.99 ansible_user=root

@@ -1,0 +1,4 @@
+---
+- name: copy ssh keys to all webservers
+  with_items: "{{groups['webservers']}}"
+  shell: ssh-copy-id -i ~/.ssh/id_rsa {{hostvars[item]['ansible_user']}}@{{item}}

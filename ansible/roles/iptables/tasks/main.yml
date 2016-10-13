@@ -1,0 +1,8 @@
+---
+- name: check if http port rule exists
+  shell: iptables -nL INPUT | grep dpt:80
+  register: http_exists
+  ignore_errors: yes
+- name: create http port rule
+  shell: if [ {{ http_exists.rc }} == "1" ]; then iptables -I INPUT 1 -p tcp --dport=80 -j ACCEPT; fi
+  changed_when: http_exists.rc == "1"

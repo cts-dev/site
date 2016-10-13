@@ -1,0 +1,9 @@
+---
+- name: yum install docker service
+  yum: name=docker-io state=present
+- name: start docker service
+  service: name=docker state=started
+- name: install python pip
+  yum: name=python-pip
+- name: install docker-py
+  pip: name=docker-py version=1.7

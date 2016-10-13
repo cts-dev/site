@@ -1,0 +1,8 @@
+---
+- hosts: webservers
+  roles:
+  - docker
+  - git
+  - cts
+  - nginx
+  - iptables

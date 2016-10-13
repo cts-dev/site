@@ -1,0 +1,16 @@
+---
+- name: copy ssh private key
+  copy: src=~/.ssh/id_rsa dest=/root/.ssh/id_rsa
+- name: change private key permissions
+  file: path=~/.ssh/id_rsa mode=600
+- name: copy ssh public key
+  copy: src=~/.ssh/id_rsa.pub dest=/root/.ssh/id_rsa.pub
+- name: yum install git
+  yum: name=git
+- name: add github to known hosts
+  lineinfile:
+    dest: /root/.ssh/known_hosts
+    create: yes
+    state: present
+    line: "{{ lookup('pipe', 'ssh-keyscan -t rsa github.com') }}"
+    regexp: "^github\\.com"
