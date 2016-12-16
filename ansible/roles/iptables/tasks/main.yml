@@ -3,6 +3,12 @@
   shell: iptables -nL INPUT | grep dpt:80
   register: http_exists
   ignore_errors: yes
+- name: output rule exists
+  debug: var=http_exists
 - name: create http port rule
   shell: if [ {{ http_exists.rc }} == "1" ]; then iptables -I INPUT 1 -p tcp --dport=80 -j ACCEPT; fi
-  changed_when: http_exists.rc == "1"
+  changed_when: http_exists.rc == 1
+  register: create_http_rule
+- name: save iptables
+  command: service iptables save
+  when: create_http_rule.changed
